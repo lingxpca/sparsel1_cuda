@@ -142,7 +142,7 @@ int main(int argc,char **argv){
     cudaEventRecord(start, 0);
     char *problem  = (char *) malloc ((100) * sizeof (char));
     strcpy(problem,argv[1]);
-    int lamb = atof(argv[2]); 
+    float lamb = atof(argv[2]); 
     float *h_in, *d_in,*d_out;   
       
     FILE *getrc = fopen(problem,"r");  
