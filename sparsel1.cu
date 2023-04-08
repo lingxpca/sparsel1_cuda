@@ -140,7 +140,7 @@ int main(int argc,char **argv){
     cudaEventCreate(&start);
     cudaEventCreate(&stop);
     cudaEventRecord(start, 0);
-    char *problem  = (char *) malloc ((100) * sizeof (char));
+    char *problem  = (char *) malloc ((1000) * sizeof (char));
     strcpy(problem,argv[1]);
     float lamb = atof(argv[2]); 
     float *h_in, *d_in,*d_out;   
@@ -229,8 +229,8 @@ int main(int argc,char **argv){
     float norm = std::sqrt(thrust::inner_product(vopt.begin(),vopt.end(),vopt.begin(),0.0f));
     thrust::transform(vopt.begin(),vopt.end(),vopt.begin(),_1/=norm);
 
-    std::string s = "v_";  
-    s.append(&problem[strlen(problem)-1]);
+    std::string s = problem;  
+    /*s.append(&problem[strlen(problem)-1]);*/
     s.append(argv[2]);
     std::ofstream output;
 	  output.open(s);
