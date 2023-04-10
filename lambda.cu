@@ -168,6 +168,7 @@ int main(int argc,char **argv){
     rc_find(getrc,&rows,&cols);
     int N = rows*cols;
  
+    fprintf(stdout, "rows %d cols %d\n", rows, cols);
       
     h_in = (float *) malloc (N*sizeof (float));
     FILE *data = fopen(problem,"r");    
