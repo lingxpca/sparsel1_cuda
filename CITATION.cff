@@ -4,5 +4,9 @@ authors:
   - family-names: Ling
     given-names: Xiao 
 title: "L1-Norm Regularized L1-Norm Best-Fit Lines"
+year= 2013
+ publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/charlespwd/project-title}},
 version: 1.0.0
 date-released: 2023-08-11
